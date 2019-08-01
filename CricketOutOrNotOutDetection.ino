@@ -69,20 +69,6 @@ void loop(){
         Serial.println("out \t" + (String)(photoResistorState-thresholdValue) + "\t" + (String)vibratorReading);
     //Serial.println("out \t" + (String)(photoResistorState) + "\t" + (String)vibratorReading);
       
-    /*
-      //turn on led if bat is over the sensor
-      if(photoResistorState>=thresholdValue){
-        digitalWrite(ledPin, HIGH);
-        ran = true;
-        //stay here until bat is not over photoresistors
-        while(photoResistorState>=thresholdValue){
-          photoResistorState = analogRead(photoResistorPin);
-          delay(100);
-        }
-      }
-      //turn led off once sensor is not covered
-      digitalWrite(ledPin, LOW);
-    */    
     delay(200);
   }
   digitalWrite(ledPin, HIGH);
